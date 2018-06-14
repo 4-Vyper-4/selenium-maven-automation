@@ -5,6 +5,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -105,6 +107,20 @@ public class DiceJobSearch {
 		
 		driver.close();
 		System.out.println(tlResult);
+		
+		PrintWriter writer;
+		try {
+			writer = new PrintWriter("resultsofrun.txt", "UTF-8");
+			writer.println(tlResult);			
+			writer.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (UnsupportedEncodingException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	
 	}
 
 }
