@@ -1,0 +1,91 @@
+
+06/23/2018
+----------
+
+Selenium WebDriver class.
+
+https://forms.zohopublic.com/murodil/form/JobApplicationForm/formperma/kOqgtfkv1dMJ4Df6k4_mekBNfNLIconAHvfdIk3CJSQ
+
+AUT -> Application Under Test.
+
+Field -> Number -> Range -> 0 --> 150
+=====================================
+
+Epic > Feature > Story > Scenario/Test case
+
+Epic > Story > Test Cases/Scenario
+
+Epic 01: SDET Job Application
+
+User Story 001 ->
+  As an Applicant, I should be able to provide my personal
+  information so that Employer can contact me.
+
+User Story 002 ->
+    As an Applicant, I should be able to describe my skills
+    so that Employer can match my skills for the position.
+
+
+Product backlog: Epic 01, Story 001, Story 002
+
+Story 001 > P1
+Story 002 > P2
+
+Sprint #1:
+  Sprint backlog: Story 001
+  Length: 2 weeks
+  Story points(Fibonacci): 5
+
+1,2,3,5,8,13,21
+One point is 8 hours.
+=======================
+
+Test cases for Story 001:
+
+    Positive, Negative Scenarios.
+    Boundary value analysis etc.
+
+Test case #001:
+    TC Description: Full name must be mandatory
+    1. Given I am on SDET Job application page
+    2. When I provide empty full name information
+    3. And I click next
+    4. Then error message "Enter a value for this field."
+       should be displayed
+
+You are assigned to test a user story:
+  what steps you take to test and automate it?
+
+  1. Analyze user story
+  2. Wrote test cases based on positive or negative scenarios
+  3. Manually test it
+  4. if no bugs then start automation
+     else log the defect and reject automation
+
+Story > Diff scenarios(positive, negative) > for each scenario, test cases
+Test to break it!
+
+driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+Implicit wait needs to set up only once in the beginning And
+it applies for all selenium steps.
+
+(30, TimeUnit.SECONDS) -> it will wait up to 30 seconds for
+the element to appear in html code.
+
+
+GETTEXT() METHOD  -> returns a visible text on the page.
+and in HTML it will be between opening and closing tags.
+ <p>Some text</p>
+
+GETATTIBUTE("VALUE") -> for input boxes, it will return the
+value that was inserted into the box.
+========================
+
+Homework:
+  1) Finish all step and click on Apply
+  2) Validate each value
+    IP address: goto google and search for what is my ip
+  3) Goto your email and find the email and click on it
+  by id. SDET Application #id
+  .........
